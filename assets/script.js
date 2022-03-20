@@ -1,8 +1,8 @@
 // Assignment code here
 var lowerChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i','j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-var upperChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i','j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-var numberChars = "1234567890";
-var specialChars = ",.!@$%^&*'";
+var upperChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H', 'I','J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+var numberChars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+var specialChars = [",", ".", "!", "@", "$", "%", "^", "&", "*"]
 
 
 // Get references to the #generate element
@@ -12,6 +12,7 @@ function generatePassword() {
   console.log("Hey, you clicked the button!")
   var passwordArray = []
   var chosenPassword = []
+  var characterArray = []
 
   //1. Prompt the user for password criteria
   //1a. Password length between 8 & 128
@@ -37,7 +38,6 @@ function generatePassword() {
     return
   }
 
-
   //somehow ensure that the answer provided is valid
 
   if (hasLower) {
@@ -50,13 +50,13 @@ function generatePassword() {
     console.log(passwordArray)
   }
 
-  if (hasUpper) {
-    passwordArray = passwordArray.concat(upperChars);
+  if (hasNumber) {
+    passwordArray = passwordArray.concat(numberChars);
     console.log(passwordArray)
   }
   
-  if (hasUpper) {
-    passwordArray = passwordArray.concat(upperChars);
+  if (hasSpecial) {
+    passwordArray = passwordArray.concat(specialChars);
     console.log(passwordArray)
   }
 
